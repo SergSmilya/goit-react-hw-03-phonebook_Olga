@@ -15,7 +15,6 @@ export default function Input({ updateState, checkName }) {
 
   function onHandleSubmit(values, { resetForm }) {
     values.id = nanoid(5);
-    console.log(checkName(values.name));
     if (checkName(values.name)) {
       return alert(`${values.name} is already in contacts`);
     }
